@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sang's Notes</title>
+      <link rel="stylesheet" type="text/css" href="project1.css">
+  </head>
+  <body>
+	  <h1>Important Concepts</h1>
+	  <div class="lesson">
+      <h2>Lesson 1: The Basics of the Web and HTML</h2>
+      <div class="concept">
+        <div class="concept-title">
+          Components of the Web 
+        </div>
+        <div class="concept-description">
+      	  <p>
+      	    A PC <span class="italic">Browser</span> makes <span class="italic">HTTP Requests</span> via the internet to <span class="italic">Hosting Servers</span>, which respond with html files that the browser displays. Please check <a href="https://www.udacity.com/course/viewer#!/c-ud721/l-3508959201/e-48329854/m-48480496">this video</a> for more explanation.   
+      	  </p>
+        </div>  
+      </div>	
+      <div class="concept">
+        <div class="concept-title">
+          HTML	
+        </div>
+        <div class="concept-description">
+          <p>
+            HTML(HyperText Markup Language) consists of <span class="italic">text</span>, <span class="italic">markup</span>, and references to other documents such as videos and images and links to other documents. 
+          </p>	
+        </div>	
+      </div>
+      <div class="concept">
+        <div class="concept-title">
+          HTML Tags and Elements  
+        </div>
+        <div class="concept-description">
+          <p>
+            HTML markup consists of elements such as <span class="italic">tags</span> and <span class="italic">contents</span>, which are surrounded by tags. Most tags have opening and closing tags, but some tags, called void tags, only have opening tags. Attributes are the properties of elements.For example, Anchor tags use  attributes that equal value such as URL that link to some documents.
+          </p>  
+        </div>  
+      </div>
+      <div class="concept">
+        <div class="concept-title">
+          Inline vs Block Elements 
+        </div>
+        <div class="concept-description">
+          <p>
+            HTML elements are either inline e.g. <span class="bold">br</span>, <span class="bold">img</span>, <span class="bold">b</span>, <span class="bold">em</span>, <span class="bold">span</span>, or block e.g. <span class="bold">p</span>, <span class="bold">div</span>. block makes an invisible box around the text.
+          </p>  
+        </div>  
+      </div>
+    </div>  
+    <div class="lesson">
+      <h2>Lesson 2: Creating a Structured Document with HTML</h2>
+      <div class="concept">
+        <div class="concept-title">
+          Tree Like Structure  
+        </div>
+        <div class="concept-description">
+          <p>
+            Different HTML elements are nested in one another. In a browser this structure looks like a series of boxes inside of other boxes. While HTML controls the structure of a web page CSS controls the style of the page.   
+          </p>
+        </div>  
+      </div>  
+      <div class="concept">
+        <div class="concept-title">
+          Boxifying a Webpage  
+        </div>
+        <div class="concept-description">
+          <p>
+            Every element on the web is contained in an invisible box. The more indented an element is when viewed as text, the more nested its box is.  
+          </p>
+        </div>  
+      </div>
+    </div>  
+    <div class="lesson">
+      <h2>Lesson 3: Adding CSS Style to HTML Structure</h2>
+      <div class="concept">
+        <div class= "concept-title">
+          CSS
+        </div>
+        <div class= "concept-description">
+          <p>
+            CSS is Cascading Style Sheets, a language that controls the style of HTML elements. 
+          </p>
+        </div>
+      </div>
+      <div class="concept">
+        <div class="concept-title">
+          How does CSS work - in sync with HTML containers and class  
+        </div>
+        <div class="concept-description">
+          <p>
+            CSS identifies a tag or a class of the element to match and applies rules that determine the design of the corresponding element. One benefit of using HTML containers and class is that it enables one to aviod the repetition of the same codes. HTML containers and class, along with CSS, provide similar styles and functionality to related html content, thereby helping one to write a more structured html script. 
+          </p> 
+          <pre>
+            <code>
+              div {
+              color: red;
+              }
+            </code>
+          </pre>
+          <p>
+            <code>div</code> is a selector that tells the browser that the  rule color: red will be applied to every div element. color is an attribute and a red is its value. If this rule is meant to be applied to only certain divs, the corresponding HTML and CSS can be rewritten using class selectors as follows. 
+          </p>
+          <pre>
+            <code>
+              &lt;div class=&quot;description&quot;&gt;&lt;/div&gt;
+                &lt;style&gt;
+                .description {
+                  color: red;
+                }
+                &lt;/style&gt;
+             </code>
+          </pre> 
+          <p>
+            Cascading means rules are applied not only to the elements that they directly match but also to the child elements of those elements. if a child element has overlapping rules applied to it, more specific rules take precedence.  Styles are applied in the following order, with definitions further down the list overwriting previous definitions: the default style of a browser, stylesheet in a separate file, stylesheet inside HTML, inline style in an element. 
+          </p>
+        </div>
+      </div>
+      <div class="concept">
+        <div class="concept-title">
+          How CSS can be incorporated into the webpage 
+        </div>
+        <div class="concept-description">
+          <p>
+            <span class="bold">1 inline style in an element</span>
+          </p>
+          <p>
+            This method is not recommended because not only it leads to redundant codes but also the style attributes of every single HTML element must be modified. 
+          </p>  
+          <pre>
+            &lt;body&gt;
+                &lt;div style=&quot;color: red&quot;&gt;
+                    This div will have a red text.
+                &lt;/div&gt;
+            &lt;/body&gt;   
+          </pre>
+          <p>
+            <span class="bold">2 Stylesheet inside HTML</span>
+          </p>
+          <p>
+            This method is good for small projects. CSS can be added inside a <code>&lt;style&gt;</code> element, which in turn is added inside a <code>&lt;head&gt;</code> element.
+          </p>
+          <pre>
+            <code>
+             &lt;head&gt;
+                &lt;style&gt;
+                  div {
+                  color : red;
+                  }
+                &lt;/style&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+               &lt;div&gt;
+                 This will have a red text.
+               &lt;/div&gt;
+              &lt;/body&gt;               
+            </code>
+          </pre> 
+          <p>
+            <span class="bold">3 stylesheet in a separate file</span>
+          </p>
+          <p>
+            This method produces the most well organized web structure. All HTML can be written in one file( main.html), and all CSS code in a separate file (style.css) in the same folder. Add a <code>&lt;head&gt;</code> element to the top of the HTML and a <code>&lt;link&gt;</code> tag, along with the following attributes, inside the<code>&lt;head&gt;</code> element. <code>&lt;link&gt;</code>: *<code>rel="stylesheet"</code>*<code>type="text/css"</code>*<code>href="style.css"</code>
+          </p>
+          <pre>
+            <code>
+              &lt;head&gt;
+                 &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                &lt;div&gt;
+                  This will have a red text.
+                &lt;/div&gt;
+              &lt;/body&gt;            
+             </code>
+          </pre>
+          <p>
+            and <code>style.css</code> can be written like this. 
+          </p>
+          <pre>
+            <code>
+              div {
+              color: red;
+            }
+            </code>
+          </pre>         
+        </div>
+      </div>
+      <div class="concept">
+        <div class="concept-title">
+          Box Sizing 
+        </div>
+        <div class="concept-description">
+          <p>
+            HTML elements are boxes and each box has 4 components(margin, border, padding, content). To ensure correct sizing, one can set size in terms of percents rather than pixels, or set the box-sizing attribute to border-box for every element. 
+          </p>
+          <pre>
+            <code>
+              * {
+               box-sizing: border-box;
+               } 
+            </code>
+          </pre>
+        </div>
+      </div>    
+      <div class="concept">
+        <div class="concept-title">
+          Box Positioning 
+        </div>
+        <div class="concept-description">
+          <p>
+            Divs are block elements (as opposed to inline), so by default they take up the entire width of a page. Adding the rule <code>display: flex;</code> to the appropriate CSS will override this behavior and let divs appear next to each other. 
+          </p>
+        </div>  
+      </div>
+    </div>  
+  </body>
+</html>
